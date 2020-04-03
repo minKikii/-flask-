@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}注册{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">用户名</label>
+    <input name="username" id="username" required>
+    <label for="password">密码</label>
+    <input type="password" name="password" id="password" required>
+    <label for="male">
+      男<input type="radio" name="gender" id="male" value="male"/>
+      女<input type="radio" name="gender" id="female" value="female"/>
+    </label>
+    <label for="school">学院</label>
+    <input name="school" id="school" required>
+    <label for="superuser">
+      超级用户<input type="radio" name="role" id="superuser" value="superuser"/>
+      普通用户<input type="radio" name="role" id="user" value="user"/>
+    </label>
+    <input type="submit" value="注册">
+  </form>
+{% endblock %}
